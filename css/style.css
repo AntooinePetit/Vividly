@@ -366,3 +366,41 @@ footer{
       }
    }
 }
+
+/* Responsive tablette */
+
+@media screen and (min-width:767px) {
+   #professionnals div div{
+      flex-direction: row;
+   }
+}
+
+/* Responsive desktop */
+
+@media screen and (min-width:1024px) {
+   #burgermenu{
+      display: none;
+   }
+   header nav{
+      display: block;
+      position: absolute;
+      right: 15px;
+
+      ul{
+         list-style: none;
+         padding: 0;
+         display: flex;
+         gap: 30px;
+      }
+   }
+   footer div{
+      flex-direction: row;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+      ul{
+         flex-direction: row;
+         gap: 30px;
+      }
+   }
+}
