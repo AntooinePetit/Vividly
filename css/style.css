@@ -79,6 +79,47 @@ img{
    color: var(--black);
 }
 
+/* Loading screen */
+
+#loader-background{
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: var(--lighorange);
+   z-index: 100;
+   animation: 2s fadeout 3s;
+   animation-fill-mode: forwards;
+}
+
+@keyframes fadeout {
+   0% { opacity: 1; }
+   100% { opacity: 0; }
+}
+
+@keyframes faded {
+   0% { opacity: 0; }
+   100% { opacity: 0; }
+}
+
+.loader {
+   border: 8px solid #fada97; 
+   border-top: 8px solid var(--orange); 
+   border-radius: 50%;
+   width: 60px;
+   height: 60px;
+   animation: spin 2s linear infinite;
+   position: fixed;
+   top: calc(50% - 34px);
+   left: calc(50% - 34px);
+}
+
+@keyframes spin {
+   0% { transform: rotate(0deg); }
+   100% { transform: rotate(360deg); }
+}
+
 /* Header */
 
 header{
