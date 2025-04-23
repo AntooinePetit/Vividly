@@ -103,6 +103,7 @@ img {
   }
   100% {
     opacity: 0;
+    z-index: -1;
   }
 }
 
@@ -356,6 +357,23 @@ header {
 
 /* Main professional */
 
+/* Animation main professionnal */
+
+#professionnal {
+   animation: fadeIn 1s;
+}
+
+@keyframes fadeIn{
+   0%{
+      opacity: 0;
+      margin-top: 100px;
+   }
+   100%{
+      opacity: 1;
+      margin-top: 0;
+   }
+}
+
 #professionnal section {
   border-top: 1px solid var(--orange);
   padding: 30px 0;
@@ -432,7 +450,7 @@ header {
   .container-960 {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
 
     #contact-infos {
       display: flex;
@@ -452,7 +470,11 @@ header {
 
     #social-media {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-around;
+
+      i{
+         font-size: 20px;
+      }
 
       a:hover {
         color: var(--lighorange);
@@ -540,8 +562,44 @@ footer {
 /* Responsive tablette */
 
 @media screen and (min-width: 767px) {
+  /* Index */
   #professionnals div div {
     flex-direction: row;
+  }
+
+  /* Professionnal */
+  #professionnal {
+    #head {
+      padding-bottom: 20px !important;
+      div {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        h1 {
+          text-align: start;
+          margin: 0;
+        }
+
+        span {
+          padding: 0;
+          border: none;
+          gap: 15px;
+        }
+      }
+    }
+
+    h2,
+    h3 {
+      text-align: center;
+    }
+
+    #contact-us {
+      #contact-infos {
+         flex-direction: row;
+         justify-content: space-evenly;
+      }
+    }
   }
 }
 
@@ -573,4 +631,6 @@ footer {
       gap: 30px;
     }
   }
+
+  /* Professionnal */
 }
