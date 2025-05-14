@@ -164,6 +164,31 @@ header {
   nav {
     display: none;
   }
+
+  .active {
+    position: absolute;
+    width: 100%;
+    top: 73px;
+    background: var(--white);
+    display: block;
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li{
+         a{
+            padding: 5px 15px;
+            display: block;
+
+            &:hover {
+               background-color: var(--orange);
+               color: var(--white);
+            }
+         }
+      }
+    }
+  }
 }
 
 /* Main index */
